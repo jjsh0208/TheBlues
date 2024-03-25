@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container{
+    position: relative;
+    width: 90%;
+    max-width: 1630px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+.left-Menu{
+    font-family: 'Hahmlet-Regular';
+    /*background-color: #f1cfeb;*/
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    line-height: 20px;
+    z-index: 99;
+    vertical-align: top;
+    text-align: left;
+
+}
+
+
+.logo{
+    margin-top: 80px;
+    padding-bottom: 60px;
+    font-size: 24px;
+}
+
+.xans-record{
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.xans-record,
+.drop_menu{
+  list-style: none;
+
+}
+.drop_menu li {
+    list-style: none;
+    position: relative;
+
+}
+
+.drop_menu ul{
+    padding-left: 0px;
+}
+.left-Menu, .left-Menu ul, .left-Menu li, .left-Menu a {
+    text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+    padding-left: 0; /* 리스트 아이템의 패딩 제거 */
+    margin-left: 0; /* 리스트 아이템의 마진 제거 */
+}
+
+.tab_wrap {
+    max-height: 0; /* 초기 최대 높이 */
+    overflow: hidden; /* 내용이 넘칠 때 숨김 */
+    opacity: 0; /* 처음에는 투명하게 */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* 애니메이션 효과 */
+
+}
+
+.tab_wrap.active {
+    max-height: 500px; /* 예시 값, 실제 내용에 맞게 조정해야 합니다. */
+    opacity: 1;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.Board_active , .Membership_active{
+    margin: 0px;
+}
+
+
+.index-content{
+    background-color: #7c857c;
+    padding-top: 80px;
+    margin-left: 18%;
+    height: 90%;
+}
+
+.footer{
+    background-color: cadetblue;
+    height: 8vh;
+}
+
