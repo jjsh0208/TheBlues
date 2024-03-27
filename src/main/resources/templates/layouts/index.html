@@ -1,51 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>The Blues</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/theBlues.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
 </head>
 <body>
     <div class="main-container">
-        <div class="left-Menu">
-            <ul class="logo">
-            <a th:href="@{#}">THE BLUES</a>
-            </ul>
-            <ul class="xans-record">
-                <li><a th:href="@{#}">THE BLUES [MADE]</a></li>
-                <li><a th:href="@{#}">NEW 5%</a></li>
-                <li><a th:href="@{#}">BEST 30</a></li>
-                <li><a th:href="@{#}">OUTWEAR</a></li>
-                <li><a th:href="@{#}">TOP</a></li>
-                <li><a th:href="@{#}">BOTTOM</a></li>
-                <li><a th:href="@{#}">ACC</a></li>
-                <li><a th:href="@{#}">당일출고</a></li>
-            </ul>
-            <ul class="drop_menu">
-                <li>
-                    <p class="Board_active">Board</p>
-                    <div class="tab_wrap">
-                        <ul>
-                            <li><a th:href="@{#}">Notice</a></li>
-                            <li><a th:href="@{#}">Q&A</a></li>
-                            <li><a th:href="@{#}">Review</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <p class="Membership_active">Membership</p>
-                    <div class="tab_wrap">
-                        <ul>
-                            <li><a th:href="@{#}">Login</a></li>
-                            <li><a th:href="@{#}">Register</a></li>
-                            <li><a th:href="@{#}">Order tracking</a></li>
-                            <li><a th:href="@{#}">My account</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <!-- left menu -->
+        <th:block th:replace="/layouts/leftMenu :: leftMenu"></th:block>
         <!-- main contents -->
         <div class="contents">
            <ul class="product_list">
@@ -109,133 +74,9 @@
 
                    </div>
                </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
-               <li class="box xans-record">
-                   <div class="thumbnail">
-                       <a th:href="@{#}">
-                           <img th:src="@{/product_img/top.png}" class="thumbs">
-                       </a>
-                   </div>
-                   <div class="item_info">
-                       <ul class="name">
-                           <li class="left">
-                               <a th:href="@{#}">
-                                   <span>coco hoodie cap windbreaker (3color)</span>
-                               </a>
-                           </li>
-                           <li class="right">
-                               36,000
-                           </li>
-                       </ul>
-
-                   </div>
-               </li>
            </ul>
-
-
             <!-- footer-->
-            <div class="footer">
-                test
-            </div>
+            <th:block th:replace="/layouts/footer :: footer"></th:block>
         </div>
     </div>
 

@@ -9,6 +9,7 @@ body{
     font-size: 15px;
     line-height: 18px;
     color: #000;
+    margin: 0;
 }
 
 a{
@@ -137,18 +138,15 @@ a{
 .item_info {
     position: relative;
     line-height: 16px;
-    margin: 0 6px;
+    margin: 0 12px;
     vertical-align: top;
 }
 
-.item_info li{
+.item_info ul{
+    padding-left: 0;
+    margin-left: 0;
     list-style: none;
 }
 
 
-
-.footer{
-    background-color: cadetblue;
-    height: 8vh;
-}
 

@@ -1,0 +1,45 @@
+#footer {
+    padding-bottom: 60px;
+    margin-top: 180px;
+    height: 8vh;
+}
+
+#footer li{
+    list-style: none;
+}
+
+
+#footer .footer_cs li{
+    display: inline-block;
+}
+
+#footer .footer_cs > ul li {
+    display: inline-block;
+    vertical-align: top; /* 상단 정렬 */
+    /*margin-right: 20px; !* 우측 여백 설정 *!*/
+}
+
+
+#footer .footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: top;
+
+}
+
+
+#footer * {
+    color: #000;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+#footer .footer_cs{
+    float: left;
+}
+
+#footer .shop_info{
+    float: right;
+}

@@ -12,4 +12,8 @@ public class MainController {
         return "layouts/index";
     }
 
+    @GetMapping("/join")
+    public String join (){
+        return "members/join";
+    }
 }
