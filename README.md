@@ -1,7 +1,6 @@
 # :shopping_cart: TheBlues 
 Spring Boot / Shopping Mall Project<br>
 * 1일 1커밋이 목표
-* 1일차
 
 ## :clipboard: 개발환경
 * IntelliJ
