@@ -40,6 +40,16 @@
     float: left;
 }
 
+.footer_cs .right {
+    margin-left: 20px;
+}
+
+.shop_info {
+    margin-right: 100px;
+}
+
+
+
 #footer .shop_info{
     float: right;
 }
