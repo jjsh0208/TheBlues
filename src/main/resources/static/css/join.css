@@ -1,0 +1,77 @@
+.xans-member-join{
+    font-size: 11px;
+}
+
+.xans-member-join{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.xans-member-join p.text_guide {
+    display: block;
+    margin-top: 2px;
+    color: #999;
+}
+
+.ec-base-table table{
+    position: relative;
+    border-left: 0px;
+    border-right: 0px;
+    border-collapse: collapse;
+    margin: 10px 0 0;
+    border: 1px solid #d7d5d5;
+    border-left-color: #fff;
+    border-right-color: #fff;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.ec-base-table th {
+    color: #777;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.ec-base-table td{
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    vertical-align: middle;
+    padding: 8px 10px 7px;
+}
+
+.xans-member-join .ec-base-table select, .xans-member-join .ec-base-table input   {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    color: #888;
+    width: 100%;
+    line-height: 28px;
+    height: 30px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.xans-member-join #mobile1{
+    width: 60px;
+    margin: 0 4px 0 0;
+}
+
+.xans-member-join #mobile2,
+.xans-member-join #mobile3{
+    width: 50px;
+    margin: 0 4px;
+}
+
+.xans-member-join .ec-base-table input[type=checkbox]{
+    width:  auto;
+}
+input[type=checkbox] + label {
+    margin: 0 4px 0 2px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}

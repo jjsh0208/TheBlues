@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>The Blues</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/join.css}">
 </head>
 <body>
 <div class="main-container">
+    <th:block th:replace="/layouts/leftMenu :: leftMenu"></th:block>
     <div class="contents">
         <div class="titleArea"> <h2>REGISTER</h2></div>
-    </div>
-    <form id="joinForm" name="joinForm"  action="members/join" method="post">
-        <div class="ec-base-title typeWrite">
-            <table border="1" summary>
-                <colgroup>
-                    <col style="width: 150px;">
-                    <col style="width: auto;">
-                </colgroup>
-                <tbody>
+        <form id="joinForm" name="joinForm"  action="members/join" method="post">
+            <div class="xans-member-join">
+                <div class="ec-base-table">
+                <table border="1" summary>
+                    <colgroup>
+                        <col style="width: 150px; text-align:left;">
+                        <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
                     <tr>
                         <th scope="row">ID</th>
                         <td>
@@ -46,14 +50,87 @@
                     </tr>
                     <tr>
                         <th scope="row">MOBILE</th>
-                        <td></td>
+                        <td>
+                            <select id="mobile1" name="mobile[]">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            -
+                            <input type="text" id="mobile2" name="mobile[]" maxlength="4">
+                            -
+                            <input type="text" id="mobile3" name="mobile[]" maxlength="4">
+                        </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
+                    <tr>
+                        <th scope="row">SMS 수신여부</th>
+                        <td>
+                            <input type="checkbox" id="is_sms" name="is_sms" value="T">
+                            <label for="is_sms">동의함</label>
+                            <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SNS로 받으실 수 있습니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">E MAIL</th>
+                        <td>
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이메일 수신여부</th>
+                        <td>
+                            <input type="checkbox" id="is_news_mail" name="is_news_mail" VALUE="T">
+                            <label for="is_news_mail">동의함</label>
+                            <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <div class="agreeArea_wrap">
+                <ul class="left">
+                    <div class="agreeArea">
+                        <div class="agree">
+                            <div class="agree_content">
+                                <p>TEST</p>
+                            </div>
+                            <p class="check">
+                                <span>이용약관에 동의하십니까?</span>
+                                <input type="checkbox" id="agree_service_check" name="agree_service_check" value="1">
+                                <label for="agree_service_check">동의함</label>
+                            </p>
+                        </div>
+                    </div>
+                </ul>
+                <ul class="right">
+                    <div class="agreeArea">
+                        <div class="agree">
+                            <div class="agree_content">
+                                TEST
+                            </div>
+                            <p class="check">
+                                <span>개인정보 수집 및 이용에 동의하십니까?</span>
+                                <input type="checkbox" id="agree_privacy_check" name="agree_privacy_check" value="1">
+                                <label class="agree_privacy_check">동의함</label>
+                            </p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="text-button-center">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+        <th:block th:replace="/layouts/footer :: footer"></th:block>
+    </div>
 
 
-    </form>
 </div>
 </body>
 </html>

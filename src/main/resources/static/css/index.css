@@ -18,6 +18,7 @@ a{
 }
 
 .main-container{
+
     position: relative;
     width: 90%;
     max-width: 1630px;
@@ -49,28 +50,19 @@ a{
 }
 
 .xans-record{
-    list-style: none;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
-.xans-record,
-.drop_menu{
-  list-style: none;
-
-}
-.drop_menu li {
-    list-style: none;
-    position: relative;
-
-}
 
 .drop_menu ul{
     padding-left: 0px;
 }
-.left-Menu, .left-Menu ul, .left-Menu li, .left-Menu a {
+
+.xans-record, .left-Menu, .left-Menu ul, .left-Menu li, .left-Menu a {
     text-align: left; /* 텍스트를 왼쪽으로 정렬 */
     padding-left: 0; /* 리스트 아이템의 패딩 제거 */
     margin-left: 0; /* 리스트 아이템의 마진 제거 */
+    list-style: none;
 }
 
 .tab_wrap {
@@ -97,13 +89,16 @@ a{
 
 .contents{
     /*background-color: #7c857c;*/
-    padding-top: 80px;
-    margin-left: 14%;
-    height: 90%;
     position: relative;
     width: 100%;
+    margin: 0 auto;
     vertical-align: top;
+    padding-top: 80px;
     min-height: 700px;
+    margin-left: 280px;
+    height: 90%;
+
+
 }
 
 .product_list{
@@ -112,6 +107,10 @@ a{
     line-height: 0;
 }
 
+.product_list > li {
+    width: 33%;
+
+}
 
 .box {
     position: relative;
@@ -126,14 +125,10 @@ a{
     margin: 0 12px 18px;
     text-align: center;
 }
-.product_list > li {
-    width: 33%;
 
-}
 .thumbs{
     width: 100%;
 }
-
 
 .item_info {
     position: relative;
@@ -148,5 +143,10 @@ a{
     list-style: none;
 }
 
-
+.titleArea{
+    min-height: 30px;
+    margin: 0px 0 80px;
+    color: #999;
+    text-align: center;
+}
 
