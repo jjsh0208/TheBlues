@@ -1,3 +1,8 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+
 .xans-member-join{
     font-size: 11px;
 }
@@ -13,6 +18,11 @@
     margin-top: 2px;
     color: #999;
 }
+.agreeArea_wrap {
+     width: 100%;
+    margin-top: 10px;
+}
+
 
 .ec-base-table table{
     position: relative;
@@ -29,8 +39,9 @@
 
 .ec-base-table th {
     color: #777;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 30px;
+    text-align: left;
 }
 
 .ec-base-table td{
@@ -66,12 +77,83 @@
 
 .xans-member-join .ec-base-table input[type=checkbox]{
     width:  auto;
+    height: auto;
 }
+
+input[id="is_sms"],
+input[id="is_news_mail"],
+input[id="agree_service_check"],
+input[id="agree_privacy_check"]{
+    position: relative;
+    top: 1.5px;
+}
+
+label[for="is_sms"],
+label[for="is_news_mail"],
+label[for="agree_service_check"],
+label[for="agree_privacy_check"]{
+    position: relative;
+    top: -1.5px;
+}
+
 input[type=checkbox] + label {
     margin: 0 4px 0 2px;
 }
 
-p{
-    margin: 0;
+.agreeArea_wrap{
+    margin-top: 10px;
+}
+
+.agreeArea_wrap .left{
+    float: left;
+    width: 49%;
     padding: 0;
+}
+
+.agreeArea_wrap .right{
+    float: right;
+    width: 49%;
+    padding: 0;
+}
+
+
+.agreeArea {
+    color: #747474;
+    font-size: 11px;
+    line-height: 20px;
+}
+.agreeArea .agree {
+    overflow: auto;
+    height: 110px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.xans-member-join .agreeArea .check {
+    padding: 10px;
+    color: #202020;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-top: 0px;
+}
+
+.text-button-center {
+    text-align: center;
+    margin-top: 230px;
+}
+
+.register_btn{
+    display: block;
+    line-height: 40px;
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }

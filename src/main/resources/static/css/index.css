@@ -6,7 +6,8 @@
 }
 
 body{
-    font-size: 15px;
+    font-family: Libre Franklin, malgun gothic, 맑은고딕, NanumGothic, dotum, 돋움, sans-serif;
+    font-size: 11px;
     line-height: 18px;
     color: #000;
     margin: 0;
@@ -32,6 +33,7 @@ a{
 .left-Menu{
     font-family: 'Hahmlet-Regular';
     /*background-color: #f1cfeb;*/
+    font-size: 13px;
     position: fixed;
     width: 220px;
     height: 100%;
