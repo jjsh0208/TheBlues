@@ -7,13 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
 
-    @GetMapping("/index")
-    public String index(){
-        return "layouts/index";
-    }
 
-    @GetMapping("/join")
-    public String join (){
-        return "members/join";
-    }
+
 }

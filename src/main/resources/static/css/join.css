@@ -157,3 +157,7 @@ a {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+.valid{
+    color: #DC143C;
+}

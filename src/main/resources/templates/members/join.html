@@ -12,7 +12,7 @@
     <th:block th:replace="/layouts/leftMenu :: leftMenu"></th:block>
     <div class="contents">
         <div class="titleArea"> <h2>REGISTER</h2></div>
-        <form id="joinForm" name="joinForm"  action="members/join" method="post">
+        <form id="joinForm" name="joinForm"  action="/members/new" method="post">
             <div class="xans-member-join">
                 <div class="ec-base-table">
                 <table border="1" summary>
@@ -24,15 +24,18 @@
                     <tr>
                         <th scope="row">ID</th>
                         <td>
-                            <input type="text" id="member_id" name="member_id" maxlength="16">
-                            <p class="text_guide">"영문 소문자/숫자, 4-16자"</p>
+                            <input type="text" id="member_id" name="member_id" maxlength="16" th:value="${MemberDto != null ? MemberDto.member_id : ''}">
+                            <p th:if="${valid_member_id}" th:text="${valid_member_id}" class="valid">valid_member_id 값이 여기에 표시됩니다.</p>
+                            <p th:unless="${valid_member_id}" class="text_guide">"영문 소문자/숫자, 4-16자"</p>
+                            <!--<p class="text_guide">"영문 소문자/숫자, 4-16자"</p>-->
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">PASSWORD</th>
                         <td>
-                            <input type="password" id="password" name="password" maxlength="16">
-                            <p class="text_guide">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10~16자)</p>
+                            <input type="password" id="password" name="password" maxlength="16" th:value="${MemberDto != null ? MemberDto.password : ''}">
+                            <p th:if="${valid_password}" th:text="${valid_password}" class="valid">valid_password 값이 여기에 표시됩니다.</p>
+                            <p th:unless="${valid_member_id}" class="text_guide">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10~16자)</p>
                         </td>
                     </tr>
                     <tr>
@@ -40,35 +43,42 @@
                         <td>
                             <input type="password" id="user_passwd_confirm" name="user_passwd_confirm" autocomplete="off"
                                    maxlength="16">
+                            <p th:if="${valid_user_passwd_confirm}" th:text="${valid_user_passwd_confirm}" class="valid"></p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row" id="nameTitle">NAME</th>
                         <td>
-                            <input type="text" name="name" id="name" maxlength="20">
+                            <input type="text" name="name" id="name" maxlength="20"
+                                   th:value="${MemberDto != null ? MemberDto.name : ''}">
+                            <p th:if="${valid_name}" th:text="${valid_name}" class="valid">valid_name 값이 여기에 표시됩니다.</p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">MOBILE</th>
                         <td>
                             <select id="mobile1" name="mobile[]">
-                                <option value="010">010</option>
-                                <option value="011">011</option>
-                                <option value="016">016</option>
-                                <option value="017">017</option>
-                                <option value="018">018</option>
-                                <option value="019">019</option>
+                                <option value="010" th:selected="${mobilePart1 != null && mobilePart1 == '010'}">010</option>
+                                <option value="011" th:selected="${mobilePart1 != null && mobilePart1 == '011'}">011</option>
+                                <option value="016" th:selected="${mobilePart1 != null && mobilePart1 == '016'}">016</option>
+                                <option value="017" th:selected="${mobilePart1 != null && mobilePart1 == '017'}">017</option>
+                                <option value="018" th:selected="${mobilePart1 != null && mobilePart1 == '018'}">018</option>
+                                <option value="019" th:selected="${mobilePart1 != null && mobilePart1 == '019'}">019</option>
                             </select>
                             -
-                            <input type="text" id="mobile2" name="mobile[]" maxlength="4">
+                            <input type="text" id="mobile2" name="mobile[]" maxlength="4"
+                                th:value="${mobilePart2}">
                             -
-                            <input type="text" id="mobile3" name="mobile[]" maxlength="4">
+                            <input type="text" id="mobile3" name="mobile[]" maxlength="4"
+                                   th:value="${mobilePart3}">
+                            <p th:if="${valid_mobile}" th:text="${valid_mobile}" class="valid">valid_name 값이 여기에 표시됩니다.</p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">SMS 수신여부</th>
                         <td>
-                            <input type="checkbox" id="is_sms" name="is_sms" value="T">
+                            <input type="checkbox" id="is_sms" name="is_sms" value="T"
+                                   th:checked="${MemberDto != null && MemberDto.is_sms == 'T'}">
                             <label for="is_sms">동의함</label>
                             <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SNS로 받으실 수 있습니다.</p>
                         </td>
@@ -76,13 +86,16 @@
                     <tr>
                         <th scope="row">E MAIL</th>
                         <td>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email"
+                                   th:value="${MemberDto != null ? MemberDto.email : ''}">
+                            <p th:if="${valid_email}" th:text="${valid_email}" class="valid">valid_email 값이 여기에 표시됩니다.</p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">이메일 수신여부</th>
                         <td>
-                            <input type="checkbox" id="is_news_mail" name="is_news_mail" VALUE="T">
+                            <input type="checkbox" id="is_news_mail" name="is_news_mail" VALUE="T"
+                                   th:checked="${MemberDto != null && MemberDto.is_news_mail == 'T'}">
                             <label for="is_news_mail">동의함</label>
                             <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p>
                         </td>
@@ -106,8 +119,10 @@
                             </div>
                             <p class="check">
                                 <span>이용약관에 동의하십니까?</span>
-                                <input type="checkbox" id="agree_service_check" name="agree_service_check" value="1">
-                                <label for="agree_service_check">동의함</label>
+                                <input type="checkbox" id="agree_service_check" name="agree_service_check" value="T"
+                                       th:checked="${MemberDto != null && MemberDto.agree_service_check == 'T'}">
+                                <label th:if="${valid_agree_service_check}" for="agree_service_check" th:text="${valid_agree_service_check}" class="valid" >동의함</label>
+                                <label th:unless="${valid_agree_service_check}" for="agree_service_check" >동의함</label>
                             </p>
                         </div>
                     </ul>
@@ -125,26 +140,25 @@
                             </div>
                             <p class="check">
                                 <span>개인정보 수집 및 이용에 동의하십니까?</span>
-                                <input type="checkbox" id="agree_privacy_check" name="agree_privacy_check" value="1">
-                                <label class="agree_privacy_check">동의함</label>
+                                <input type="checkbox" id="agree_privacy_check" name="agree_privacy_check" value="T"
+                                       th:checked="${MemberDto != null && MemberDto.agree_privacy_check == 'T'}">
+                                <label th:if="${valid_agree_privacy_check}" for="agree_privacy_check" th:text="${valid_agree_privacy_check}" class="valid" >동의함</label>
+                                <label th:unless="${valid_agree_privacy_check}" for="agree_privacy_check" >동의함</label>
                             </p>
                         </div>
                     </ul>
                 </div>
 
                 <div class="text-button-center">
-                    <a href="#" class="register_btn">SUBMIT</a>
+                    <a href="#" class="register_btn" id="register_btn">SUBMIT</a>
                 </div>
             </div>
-
-
-
-
         </form>
         <th:block th:replace="/layouts/footer :: footer"></th:block>
     </div>
 
     <script th:src="@{/javaScript/toggle.js}"></script>
+    <script th:src="@{/javaScript/joinInputCheck.js}"></script>
 </div>
 </body>
 </html>
