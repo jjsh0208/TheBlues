@@ -67,5 +67,11 @@ public class MemberController {
         return"layouts/index";
     }
 
+    //로그인 화면 이동
+    @GetMapping("/members/login")
+    public String login(){
+        return "members/login";
+    }
+
 
 }

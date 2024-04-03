@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
 </head>
 <body>
-
+<div class="main-container">
+    <!-- left menu -->
+    <th:block th:replace="/layouts/leftMenu :: leftMenu"></th:block>
+    <!-- main contents -->
+    <div class="contents">
+        <div class="memberLogin">
+            <div id="torWrap">
+                <form action="" method="post" id="member_from" enctype="multipart/form-data">
+                    <div class="ID">
+                            <input type="text" class="loginId" id="loginId" required>
+                            <label for="loginId">ID</label>
+                            <span></span>
+                    </div>
+                    <div class="inputBox_orderno"></div>
+                    <div class="PASSWORD">
+                        <input type="password" class="loginPs" id="loginPs" required>
+                        <label for="loginPs">PASSWORD</label>
+                        <span></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <th:block th:replace="/layouts/footer :: footer"></th:block>
+    </div>
+</div>
+<script th:src="@{/javaScript/toggle.js}"></script>
 </body>
 </html>

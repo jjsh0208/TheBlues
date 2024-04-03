@@ -18,7 +18,7 @@ public class MemberFormDTO {
 
     //사용자 계정
     @NotBlank(message = "회원계정을 입력해주세요.")
-    private String member_id;
+    private String memberId;
 
     //비밀번호
     @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*\\W).{10,16}$|"

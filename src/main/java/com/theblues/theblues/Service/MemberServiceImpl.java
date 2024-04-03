@@ -24,7 +24,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public Long join(MemberFormDTO memberFormDTO) {
         Member member = Member.builder()
-                .member_id(memberFormDTO.getMember_id())
+                .memberId(memberFormDTO.getMemberId())
                 .password(memberFormDTO.getPassword())
                 .name(memberFormDTO.getName())
                 .mobile(memberFormDTO.getMobile())
@@ -50,8 +50,8 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Transactional(readOnly = true)
-    public boolean checkMemberIdExists(String member_id){
-        return memberRepository.existsByMember_id(member_id);
+    public boolean checkMemberIdExists(String memberId){
+        return memberRepository.existsByMemberId(memberId);
     }
 
 }
