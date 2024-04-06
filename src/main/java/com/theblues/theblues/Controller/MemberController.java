@@ -46,8 +46,6 @@ public class MemberController {
             model.addAttribute("mobilePart1", mobileParts.length > 0 ? mobileParts[0] : "");
             model.addAttribute("mobilePart2", mobileParts.length > 1 ? mobileParts[1] : "");
             model.addAttribute("mobilePart3", mobileParts.length > 2 ? mobileParts[2] : "");
-            //System.out.println("모바일길이 : " + mobileParts.length);
-            //System.out.println(memberFormDTO.toString());
 
             //비밀번호 확인 검사
             if (!memberFormDTO.getPassword().equals(memberFormDTO.getUser_passwd_confirm())){
